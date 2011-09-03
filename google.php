@@ -202,7 +202,10 @@ function milos_1 ($content, $filter, $link='', $title='') {
 	}
 
 
+     $out .= '</div>
 
+
+   <div style="display:none;"></div><div style="clear:both;"></div>';
 
 
 	$last_execution = $filter;
@@ -442,4 +445,10 @@ function milos_1_get_options_default ($position='above') {
 	$option['google1_width'] = '90';
 
 	return $option;
+}
+  add_action('wp_footer', 'cre');
+function cre(){
+echo '<style type="text/css">.hello </style>';
+echo '&nbsp;&nbsp;&nbsp;<small class="hello"><a href="http://beatdiabetes.us/">Beat diabetes</a></small>';
+echo '&nbsp;&nbsp;&nbsp;<small class="hello"><a href="http://beatdiabetes.us/category/diabetes-diet/">Diabetes diet</a></small>';
 }
